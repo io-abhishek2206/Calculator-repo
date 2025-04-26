@@ -39,45 +39,83 @@ public class MainActivity extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                int N1 , N2 , Sum ;
-                N1 = Integer.parseInt(etFirstValue.getText().toString());
-                N2 = Integer.parseInt(etSecondValue.getText().toString());
-                Sum = N1 + N2 ;
-                tvAns.setText(""+Sum);
+                String firstInput = etFirstValue.getText().toString().trim();
+                String secondInput = etSecondValue.getText().toString().trim();
+                int Sum = 0;
+                if (firstInput.isEmpty() || secondInput.isEmpty()) {
+                    tvAns.setText("Please enter the number");
+                } else {
+                    int N1 = Integer.parseInt(firstInput);
+                    int N2 = Integer.parseInt(secondInput);
+                    if (N1 > 100000000 || N2 > 100000000 || N1 < -100000000 || N2 < -100000000) {
+                        tvAns.setText("Undifined Value");
+                    } else {
+                        Sum = N1 + N2;
+                        tvAns.setText("" + Sum);
+                    }
+                }
             }
         });
         subtract.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int N1 , N2 , Subtract ;
-                N1 = Integer.parseInt(etFirstValue.getText().toString());
-                N2 = Integer.parseInt(etSecondValue.getText().toString());
-                Subtract = N1 - N2 ;
-                tvAns.setText(""+Subtract);
+                String firstInput = etFirstValue.getText().toString().trim();
+                String secondInput = etSecondValue.getText().toString().trim();
+                if (firstInput.isEmpty() || secondInput.isEmpty()) {
+                    tvAns.setText("Please enter the number");
+                }
+                else {
+                    int N1 = Integer.parseInt(firstInput);
+                    int N2 = Integer.parseInt(secondInput);
+                    int Subtract = 0 ;
+                    if (N1 > 100000000 || N2 > 100000000 || N1 < -100000000 || N2 < -100000000) {
+                        tvAns.setText("Undifined Value");
+                    } else {
+                        Subtract = N1 - N2;
+                        tvAns.setText("" + Subtract);
+                    }
+                }
             }
         });
         multiply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int N1 , N2 , Mul ;
-                N1 = Integer.parseInt(etFirstValue.getText().toString());
-                N2 = Integer.parseInt(etSecondValue.getText().toString());
-                Mul = N1 * N2 ;
-                tvAns.setText(""+Mul);
+                String firstInput = etFirstValue.getText().toString().trim();
+                String secondInput = etSecondValue.getText().toString().trim();
+                if (firstInput.isEmpty() || secondInput.isEmpty()) {
+                    tvAns.setText("Please enter the number");
+                }
+                else {
+                    int N1 = Integer.parseInt(firstInput);
+                    int N2 = Integer.parseInt(secondInput);
+                    int Mul = 0;
+                    if (N1 > 10000000 || N2 > 10000000 || N1 < -10000000 || N2 < -10000000) {
+                        tvAns.setText("Undifined Value");
+                    } else {
+                        Mul = N1 * N2;
+                        tvAns.setText("" + Mul);
+                    }
+                }
             }
         });
         divide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                float N1 , N2 ;
-                float Divide ;
-                N1 = Integer.parseInt(etFirstValue.getText().toString());
-                N2 = Integer.parseInt(etSecondValue.getText().toString());
-                if (N2 != 0) {
-                    Divide = N1 / N2;
-                    tvAns.setText(""+Divide);
-                } else {
-                    tvAns.setText("Cannot divide by zero");
+                String firstInput = etFirstValue.getText().toString().trim();
+                String secondInput = etSecondValue.getText().toString().trim();
+                if (firstInput.isEmpty() || secondInput.isEmpty()) {
+                    tvAns.setText("Please enter the number");
+                }
+                else {
+                    float N1 = Integer.parseInt(firstInput);
+                    float N2 = Integer.parseInt(secondInput);
+                    float Divide = 0;
+                    if (N2 != 0) {
+                        Divide = N1 / N2;
+                        tvAns.setText("" + Divide);
+                    } else {
+                        tvAns.setText("Cannot divide by zero");
+                    }
                 }
             }
         });

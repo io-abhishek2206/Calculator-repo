@@ -47,9 +47,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
         android:layout_marginEnd="25dp"
-        android:ems="10"
         android:hint="First Number"
         android:inputType="number"
+        android:maxLength="8"
+        android:singleLine="false"
         android:textSize="20sp" />
 
     <TextView
@@ -70,6 +71,7 @@
         android:ems="10"
         android:hint="Second Number"
         android:inputType="number"
+        android:maxLength="8"
         android:textSize="20sp" />
 
     <TextView
@@ -96,7 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
         android:layout_marginRight="100dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="30dp"
         android:background="#03A9F4"
         android:text="@string/Plus"
         android:textColor="@color/black"
@@ -108,7 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
         android:layout_marginRight="100dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="30dp"
         android:background="#03A9F4"
         android:text="@string/Minus"
         android:textColor="@color/black" />
@@ -119,7 +121,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
         android:layout_marginRight="100dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="30dp"
         android:background="#03A9F4"
         android:text="@string/Multiply"
         android:textColor="@color/black" />
@@ -130,7 +132,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
         android:layout_marginRight="100dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="30dp"
         android:background="#03A9F4"
         android:text="@string/Divide"
         android:textColor="@color/black" />
